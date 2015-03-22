@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{F0A6508D-0DE8-4EE0-8395-C5551C0FB0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Core", "MunkeyIssues.Core\MunkeyIssues.Core.csproj", "{4121608F-F8CA-47B4-9E22-67F018531474}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{54FE74FB-4833-40B2-9BA1-AB494E471B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.KanbanService.Lib", "MunkeyIssues.KanbanService.Lib\MunkeyIssues.KanbanService.Lib.csproj", "{43941F9F-6E6F-44DC-9761-EFD531021B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.ProjectService.Lib", "MunkeyIssues.ProjectService.Lib\MunkeyIssues.ProjectService.Lib.csproj", "{F27FD0A0-6660-455B-9871-72F347050D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.UserService.Lib", "MunkeyIssues.UserService.Lib\MunkeyIssues.UserService.Lib.csproj", "{39376203-7E4F-48CE-A225-23FFE284200E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyService.IssueService", "MunkeyService.IssueService\MunkeyService.IssueService.csproj", "{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4121608F-F8CA-47B4-9E22-67F018531474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4121608F-F8CA-47B4-9E22-67F018531474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4121608F-F8CA-47B4-9E22-67F018531474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4121608F-F8CA-47B4-9E22-67F018531474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43941F9F-6E6F-44DC-9761-EFD531021B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43941F9F-6E6F-44DC-9761-EFD531021B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43941F9F-6E6F-44DC-9761-EFD531021B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43941F9F-6E6F-44DC-9761-EFD531021B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27FD0A0-6660-455B-9871-72F347050D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27FD0A0-6660-455B-9871-72F347050D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27FD0A0-6660-455B-9871-72F347050D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27FD0A0-6660-455B-9871-72F347050D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39376203-7E4F-48CE-A225-23FFE284200E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39376203-7E4F-48CE-A225-23FFE284200E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39376203-7E4F-48CE-A225-23FFE284200E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39376203-7E4F-48CE-A225-23FFE284200E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43941F9F-6E6F-44DC-9761-EFD531021B1F} = {54FE74FB-4833-40B2-9BA1-AB494E471B52}
+		{F27FD0A0-6660-455B-9871-72F347050D0E} = {54FE74FB-4833-40B2-9BA1-AB494E471B52}
+		{39376203-7E4F-48CE-A225-23FFE284200E} = {54FE74FB-4833-40B2-9BA1-AB494E471B52}
+		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1} = {F0A6508D-0DE8-4EE0-8395-C5551C0FB0ED}
+	EndGlobalSection
+EndGlobal
