@@ -1,10 +1,9 @@
 ﻿using System.Data.Entity;
-using MunkeyIssues.Core.Data;
 using MunkeyIssues.IssueService.Domain;
 
 namespace MunkeyIssues.IssueService.Persistence
 {
-    public class IssueContext : DbContext, IDbContext
+    public class IssueContext : DbContext, IIssueContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Issue> Issues { get; set; }
