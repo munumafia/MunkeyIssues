@@ -1,6 +1,6 @@
 ﻿using MunkeyIssues.Core.Domain;
 
-namespace MunkeyService.IssueService.Domain
+namespace MunkeyIssues.IssueService.Domain
 {
     public class Priority : IEntity
     {

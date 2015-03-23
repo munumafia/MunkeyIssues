@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using MunkeyIssues.Core.Data;
-using MunkeyService.IssueService.Domain;
+using MunkeyIssues.IssueService.Domain;
 
-namespace MunkeyService.IssueService.Persistence
+namespace MunkeyIssues.IssueService.Persistence
 {
     public class IssueContext : DbContext, IDbContext
     {

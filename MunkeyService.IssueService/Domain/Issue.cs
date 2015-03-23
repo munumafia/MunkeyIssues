@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MunkeyIssues.Core.Domain;
 
-namespace MunkeyService.IssueService.Domain
+namespace MunkeyIssues.IssueService.Domain
 {
     public class Issue : IEntity 
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MunkeyService.IssueService</RootNamespace>
-    <AssemblyName>MunkeyService.IssueService</AssemblyName>
+    <RootNamespace>MunkeyIssues.IssueService</RootNamespace>
+    <AssemblyName>MunkeyIssues.IssueService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

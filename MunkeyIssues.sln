@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Core", "MunkeyIssues.Core\MunkeyIssues.Core.csproj", "{4121608F-F8CA-47B4-9E22-67F018531474}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyService.IssueService", "MunkeyService.IssueService\MunkeyService.IssueService.csproj", "{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.IssueService", "MunkeyService.IssueService\MunkeyIssues.IssueService.csproj", "{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

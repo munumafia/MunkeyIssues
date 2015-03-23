@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using MunkeyService.IssueService.Domain;
+using MunkeyIssues.IssueService.Domain;
 
-namespace MunkeyService.IssueService.Persistence.Mappings
+namespace MunkeyIssues.IssueService.Persistence.Mappings
 {
     public class CategoryMapping : EntityTypeConfiguration<Category>
     {
