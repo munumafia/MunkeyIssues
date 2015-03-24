@@ -13,6 +13,6 @@ namespace MunkeyIssues.Core.Messaging.Issues.Category
         /// <summary>
         /// The ID of the category to retrieve
         /// </summary>
-        public Guid CategoryId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

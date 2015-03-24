@@ -7,9 +7,15 @@ namespace MunkeyIssues.Core.Messaging.Issues.Category
     public class CreateCategoryResponse : CorrelatedBy<Guid>
     {
         /// <summary>
+        /// The category that was created
+        /// </summary>
+        public Category Category { get; set; }
+
+        /// <summary>
         /// The message id
         /// </summary>
         public Guid CorrelationId { get; set; }
+
 
         /// <summary>
         /// Any errors that occurred when creating the category

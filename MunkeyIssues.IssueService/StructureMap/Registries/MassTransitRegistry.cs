@@ -1,6 +1,5 @@
-﻿using MassTransit;
+﻿using MunkeyIssues.IssueService.MassTransit.Consumers;
 using StructureMap.Configuration.DSL;
-using StructureMap.Graph;
 
 namespace MunkeyIssues.IssueService.StructureMap.Registries
 {
@@ -8,13 +7,7 @@ namespace MunkeyIssues.IssueService.StructureMap.Registries
     {
         public MassTransitRegistry()
         {
-            // Register all the consumers with StructureMap
-            Scan(x =>
-            {
-                x.TheCallingAssembly();
-                x.AddAllTypesOf<IConsumer>();
-                x.WithDefaultConventions();
-            });
+            ForConcreteType<CategoryConsumers>();
         }
     }
 }

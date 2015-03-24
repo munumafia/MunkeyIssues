@@ -7,7 +7,7 @@ namespace MunkeyIssues.Core.Messaging.Issues.Category
         /// <summary>
         /// The ID of the category
         /// </summary>
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// The name of the category

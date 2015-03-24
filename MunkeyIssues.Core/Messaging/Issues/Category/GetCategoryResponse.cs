@@ -9,7 +9,7 @@ namespace MunkeyIssues.Core.Messaging.Issues.Category
         /// <summary>
         /// The category that was retrieved
         /// </summary>
-        public Guid Category { get; set; }
+        public Category Category { get; set; }
 
         /// <summary>
         /// The ID of the message

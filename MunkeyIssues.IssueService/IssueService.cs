@@ -1,15 +1,24 @@
-﻿namespace MunkeyIssues.IssueService
+﻿using MassTransit;
+using MunkeyIssues.IssueService.MassTransit;
+using MunkeyIssues.IssueService.StructureMap;
+using StructureMap;
+
+namespace MunkeyIssues.IssueService
 {
     public class IssueService
     {
+        private IContainer _Container;
+        private IServiceBus _ServiceBus;
+
         public void Start()
         {
-            // Should log about the service starting here...
+            _Container = ContainerBuilder.Build();
+            _ServiceBus = MassTransitBuilder.Build(_Container);
         }
 
         public void Stop()
         {
-            // Should log about the service stopping here...
+            _ServiceBus.Dispose();
         }
     }
 }

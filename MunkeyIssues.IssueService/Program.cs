@@ -1,7 +1,4 @@
-﻿using MassTransit;
-using MunkeyIssues.IssueService.StructureMap.Registries;
-using StructureMap;
-using Topshelf;
+﻿using Topshelf;
 
 namespace MunkeyIssues.IssueService
 {
@@ -9,21 +6,6 @@ namespace MunkeyIssues.IssueService
     {
         static void Main()
         {
-            var container = new Container(x =>
-            {
-                x.AddRegistry(new MassTransitRegistry());
-                x.AddRegistry(new PersistenceRegistry());
-            });
-
-            var massTransit = ServiceBusFactory.New(bus =>
-            {
-                bus.UseRabbitMq();
-                bus.ReceiveFrom("rabbitmq://localhost/MunkeyIssues_Issues");
-                bus.Subscribe(x => x.LoadFrom(container));
-            });
-
-            container.Inject(massTransit);
-
             HostFactory.Run(x =>
             {
                 x.Service<IssueService>(s =>

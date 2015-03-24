@@ -10,5 +10,13 @@ namespace MunkeyIssues.IssueService.Persistence
         public DbSet<Priority> Priorities { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Tag> Tags { get; set; }
+
+        public IssueContext() : base("IssueService") { }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.AddFromAssembly(GetType().Assembly);
+        }
     }
 }
