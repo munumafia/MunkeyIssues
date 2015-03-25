@@ -26,7 +26,7 @@ namespace MunkeyIssues.IssueService.MassTransit.Consumers
             {
                 Category = _Mapper.Map<Category>(category),
                 CorrelationId = request.CorrelationId,
-                Result = category != null ? MessageResult.Success : MessageResult.Error
+                Result = category != null ? MessageResult.Success : MessageResult.NotFound
             };
 
             context.Respond(response);

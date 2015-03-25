@@ -11,6 +11,7 @@ namespace MunkeyIssues.Web.StructureMap
             {
                 x.AddRegistry(new AutoMapperRegistry());
                 x.AddRegistry(new MassTransitRegistry());
+                x.AddRegistry(new ServicesRegistry());
                 x.AddRegistry(new WebApiControllerRegistry());
             });
         }

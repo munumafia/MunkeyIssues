@@ -14,5 +14,10 @@ namespace MunkeyIssues.Core.Messaging.Issues.Category
         /// The ID of the category to retrieve
         /// </summary>
         public int CategoryId { get; set; }
+
+        public GetCategoryRequest()
+        {
+            CorrelationId = Guid.NewGuid();
+        }
     }
 }
