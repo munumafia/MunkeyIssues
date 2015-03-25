@@ -1,4 +1,5 @@
-﻿using Topshelf;
+﻿using MunkeyIssues.IssueService.AutoMapper;
+using Topshelf;
 
 namespace MunkeyIssues.IssueService
 {
@@ -6,6 +7,8 @@ namespace MunkeyIssues.IssueService
     {
         static void Main()
         {
+            AutoMapperBuilder.Build();
+
             HostFactory.Run(x =>
             {
                 x.Service<IssueService>(s =>

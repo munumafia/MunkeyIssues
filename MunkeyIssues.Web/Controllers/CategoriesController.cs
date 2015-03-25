@@ -52,5 +52,27 @@ namespace MunkeyIssues.Web.Controllers
 
             return category;
         }
+
+        public CategoryViewModel Post(CategoryViewModel model)
+        {
+            var catResp = new CategoryViewModel();;
+
+            var request = new CreateCategoryRequest
+            {
+                Category = _Mapper.Map<Category>(model)
+            };
+
+            _ServiceBus.PublishRequest(request, x =>
+            {
+                x.Handle<CreateCategoryResponse>(response =>
+                {
+                   catResp = _Mapper.Map<CategoryViewModel>(response.Category);                                                                      
+                });
+
+                x.SetTimeout(30.Seconds());
+            });
+
+            return catResp;
+        }
     }
 }
