@@ -8,10 +8,11 @@ namespace MunkeyIssues.IssueService.Persistence.Mappings
     {
         public StatusMapping()
         {
+            ToTable("dbo.Statuses");
             HasKey(s => s.Id);
 
             Property(s => s.Id)
-                .HasColumnName("CategoryId")
+                .HasColumnName("StatusId")
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(s => s.IsDefault);

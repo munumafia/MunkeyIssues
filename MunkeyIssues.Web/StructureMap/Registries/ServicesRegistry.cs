@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Web.Configuration;
 using Magnum.Extensions;
+using MunkeyIssues.Web.ResponseMappers;
+using MunkeyIssues.Web.Services;
 using MunkeyIssues.Web.Services.Categories;
+using MunkeyIssues.Web.Services.Statuses;
 using StructureMap.Configuration.DSL;
 
 namespace MunkeyIssues.Web.StructureMap.Registries
@@ -12,7 +15,11 @@ namespace MunkeyIssues.Web.StructureMap.Registries
         {
             var serviceTimeout = GetServiceRequestTimeout();
 
-            For<ICategoryService>().Use<CategoryService>().Ctor<TimeSpan>().Is(serviceTimeout);
+            For<IServiceBusService>().Use<ServiceBusService>().Ctor<TimeSpan>().Is(serviceTimeout);
+            For<ICategoryService>().Use<CategoryService>();
+            For<IStatusService>().Use<StatusService>();
+            
+            For<IResponseMapper>().Use<ResponseMapper>();
         }
 
         private static TimeSpan GetServiceRequestTimeout()

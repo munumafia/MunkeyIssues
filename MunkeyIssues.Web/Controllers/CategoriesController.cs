@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
 using MunkeyIssues.Core.Messaging.Issues.Category;
 using MunkeyIssues.Web.Models;
+using MunkeyIssues.Web.ResponseMappers;
 using MunkeyIssues.Web.Services.Categories;
-using MessageResult = MunkeyIssues.Core.Messaging.MessageResult;
 
 namespace MunkeyIssues.Web.Controllers
 {
@@ -15,16 +13,13 @@ namespace MunkeyIssues.Web.Controllers
     {
         private readonly ICategoryService _CategoryService;
         private readonly IMappingEngine _Mapper;
+        private readonly IResponseMapper _ResponseMapper;
 
-        public CategoriesController(ICategoryService categoryService, IMappingEngine mapper)
+        public CategoriesController(ICategoryService categoryService, IMappingEngine mapper, IResponseMapper responseMapper)
         {
             _CategoryService = categoryService;
             _Mapper = mapper;
-        }
-
-        public List<CategoryViewModel> Get()
-        {
-            return new List<CategoryViewModel>();
+            _ResponseMapper = responseMapper;
         }
 
         public Task<HttpResponseMessage> Get(int id)
@@ -33,23 +28,8 @@ namespace MunkeyIssues.Web.Controllers
             return _CategoryService.GetCategoryAsync(request).ContinueWith(resp =>
             {
                 var message = resp.Result;
-                HttpResponseMessage response = null;
-
-                switch (message.Result)
-                {
-                    case MessageResult.Success:
-                        var viewModel = _Mapper.Map<CategoryViewModel>(message.Category);
-                        response = Request.CreateResponse(HttpStatusCode.OK, viewModel);
-                        break;
-                    case MessageResult.NotFound:
-                        response = new HttpResponseMessage(HttpStatusCode.NotFound);
-                        break;
-                    default:
-                        response = new HttpResponseMessage(HttpStatusCode.InternalServerError);
-                        break;
-                }
-
-                return response;
+                var viewModel = _Mapper.Map<CategoryViewModel>(message.Category);
+                return _ResponseMapper.ForGet(Request, viewModel, message.Result);
             });
         }
 
@@ -58,22 +38,9 @@ namespace MunkeyIssues.Web.Controllers
             var request = new CreateCategoryRequest { Category = _Mapper.Map<Category>(model) };
             return _CategoryService.CreateCategoryAsync(request).ContinueWith(resp =>
             {
-                HttpResponseMessage response = null;
                 var message = resp.Result;
-                
-                switch (message.Result)
-                {
-                    case MessageResult.Success:
-                        var viewModel = _Mapper.Map<CategoryViewModel>(message.Category);
-                        response = Request.CreateResponse(HttpStatusCode.OK, viewModel);
-                        break;
-                    default:
-                        // Todo: Handle any validation errors here
-                        response = new HttpResponseMessage(HttpStatusCode.InternalServerError);
-                        break;
-                }
-
-                return response;
+                var viewModel = _Mapper.Map<CategoryViewModel>(message.Category);
+                return _ResponseMapper.ForCreate(Request, viewModel, message.Result);
             });
         }
     }

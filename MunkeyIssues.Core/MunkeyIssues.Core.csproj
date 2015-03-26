@@ -68,6 +68,7 @@
     <Compile Include="Messaging\Issues\Status\CreateStatusResponse.cs" />
     <Compile Include="Messaging\Issues\Status\GetStatusRequest.cs" />
     <Compile Include="Messaging\Issues\Status\GetStatusResponse.cs" />
+    <Compile Include="Messaging\Issues\Status\Status.cs" />
     <Compile Include="Messaging\Issues\Tag\CreateTagRequest.cs" />
     <Compile Include="Messaging\Issues\Tag\CreateTagResponse.cs" />
     <Compile Include="Messaging\MessageResult.cs" />

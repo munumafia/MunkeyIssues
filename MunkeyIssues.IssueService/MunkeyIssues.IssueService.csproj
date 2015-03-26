@@ -91,6 +91,7 @@
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="IssueService.cs" />
     <Compile Include="MassTransit\Consumers\CategoryConsumers.cs" />
+    <Compile Include="MassTransit\Consumers\StatusConsumers.cs" />
     <Compile Include="MassTransit\MassTransitBuilder.cs" />
     <Compile Include="Persistence\IIssueContext.cs" />
     <Compile Include="Persistence\IssueContext.cs" />

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using MunkeyIssues.Core.Messaging.Issues.Category;
+using MunkeyIssues.Core.Messaging.Issues.Status;
 
 namespace MunkeyIssues.IssueService.AutoMapper
 {
@@ -14,6 +10,9 @@ namespace MunkeyIssues.IssueService.AutoMapper
         {
             Mapper.CreateMap<Domain.Category, Category>();
             Mapper.CreateMap<Category, Domain.Category>();
+
+            Mapper.CreateMap<Domain.Status, Status>();
+            Mapper.CreateMap<Status, Domain.Status>();
         }
     }
 }

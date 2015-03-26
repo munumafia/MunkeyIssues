@@ -206,6 +206,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StatusesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,9 +216,16 @@
     <Compile Include="Models\CategoryViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\StatusViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseMappers\IResponseMapper.cs" />
+    <Compile Include="ResponseMappers\ResponseMapper.cs" />
     <Compile Include="Services\Categories\CategoryService.cs" />
     <Compile Include="Services\Categories\ICategoryService.cs" />
+    <Compile Include="Services\IServiceBusService.cs" />
+    <Compile Include="Services\ServiceBusService.cs" />
+    <Compile Include="Services\Statuses\IStatusService.cs" />
+    <Compile Include="Services\Statuses\StatusService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StructureMap\ContainerBuilder.cs" />
     <Compile Include="StructureMap\Registries\AutoMapperRegistry.cs" />
