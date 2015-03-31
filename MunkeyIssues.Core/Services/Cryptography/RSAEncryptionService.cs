@@ -19,16 +19,10 @@ namespace MunkeyIssues.Core.Services.Cryptography
 
         public string EncryptString(string data, string publicKey)
         {
-            using (var rsa = new RSACryptoServiceProvider())
-            {
-                var key = DecodeString(publicKey);
-                rsa.FromXmlString(key);
+            var bytes = Encoding.UTF8.GetBytes(data);
+            var encrypted = Encrypt(bytes, publicKey);
 
-                var bytes = Encoding.UTF8.GetBytes(data);
-                var encrypted = rsa.Encrypt(bytes, true);
-
-                return Convert.ToBase64String(encrypted);
-            }
+            return Convert.ToBase64String(encrypted);
         }
 
         public byte[] Decrypt(byte[] data, string privateKey)
@@ -44,7 +38,8 @@ namespace MunkeyIssues.Core.Services.Cryptography
 
         public string DecryptString(string data, string privateKey)
         {
-            throw new NotImplementedException();
+            var bytes = Decrypt(Convert.FromBase64String(data), privateKey);
+            return Encoding.UTF8.GetString(bytes);
         }
 
         private static string EncodeString(byte[] bytes)
