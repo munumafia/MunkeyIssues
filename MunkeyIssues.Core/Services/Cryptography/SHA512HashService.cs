@@ -8,18 +8,24 @@ namespace MunkeyIssues.Core.Services.Cryptography
     {
         private readonly int _SaltLength;
 
-        public SHA512HashService(int saltLength = 15)
+        public SHA512HashService(int saltLength = 16)
         {
+            if (saltLength < 16)
+            {
+                var message = string.Format("Salt length of {0} is invalid, must be 16 or greater", saltLength);
+                throw new ArgumentException(message, "saltLength");
+            }
+
             _SaltLength = saltLength;
         }
 
         public string GenerateSalt()
         {
-            var random = new Random(unchecked((int)DateTime.Now.Ticks));
+            var random = new Random(Guid.NewGuid().GetHashCode());
             var saltBytes = new byte[_SaltLength];
             random.NextBytes(saltBytes);
 
-            return Encoding.UTF8.GetString(saltBytes);
+            return Convert.ToBase64String(saltBytes);
         }
 
         public byte[] Hash(byte[] data)
