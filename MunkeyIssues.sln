@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{65AF4FDD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Core.UnitTests", "MunkeyIssues.Core.UnitTests\MunkeyIssues.Core.UnitTests.csproj", "{4562AD41-4045-4280-BE33-E0C60FCEA0AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Migrations", "MunkeyIssues.Migrations\MunkeyIssues.Migrations.csproj", "{B57E449C-81DF-42E5-BDC1-5AF729F31F86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{4562AD41-4045-4280-BE33-E0C60FCEA0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4562AD41-4045-4280-BE33-E0C60FCEA0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4562AD41-4045-4280-BE33-E0C60FCEA0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B57E449C-81DF-42E5-BDC1-5AF729F31F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57E449C-81DF-42E5-BDC1-5AF729F31F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57E449C-81DF-42E5-BDC1-5AF729F31F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57E449C-81DF-42E5-BDC1-5AF729F31F86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
