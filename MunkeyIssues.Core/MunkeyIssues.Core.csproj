@@ -72,7 +72,15 @@
     <Compile Include="Messaging\Issues\Tag\CreateTagRequest.cs" />
     <Compile Include="Messaging\Issues\Tag\CreateTagResponse.cs" />
     <Compile Include="Messaging\MessageResult.cs" />
+    <Compile Include="Messaging\Users\Auth\AuthenticateRequest.cs" />
+    <Compile Include="Messaging\Users\Auth\AuthenticateResponse.cs" />
+    <Compile Include="Messaging\Users\Register\RegisterUserRequest.cs" />
+    <Compile Include="Messaging\Users\Register\RegisterUserResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Cryptography\IEncryptionService.cs" />
+    <Compile Include="Services\Cryptography\IHashService.cs" />
+    <Compile Include="Services\Cryptography\RSAEncryptionService.cs" />
+    <Compile Include="Services\Cryptography\SHA512HashService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

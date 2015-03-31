@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.IssueService",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Web", "MunkeyIssues.Web\MunkeyIssues.Web.csproj", "{53104B38-7808-4D51-9EE3-40B2272391C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.UserService", "MunkeyIssues.UserService\MunkeyIssues.UserService.csproj", "{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,16 @@ Global
 		{53104B38-7808-4D51-9EE3-40B2272391C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53104B38-7808-4D51-9EE3-40B2272391C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53104B38-7808-4D51-9EE3-40B2272391C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7A7B55D5-2EF5-4B74-842B-691BFC235AF1} = {F0A6508D-0DE8-4EE0-8395-C5551C0FB0ED}
+		{F71F1D87-F3E9-4546-9FFC-89902FFF1B39} = {F0A6508D-0DE8-4EE0-8395-C5551C0FB0ED}
 	EndGlobalSection
 EndGlobal
