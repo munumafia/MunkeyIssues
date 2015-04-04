@@ -1,5 +1,5 @@
-﻿using MunkeyIssues.Web.StructureMap.Registries;
-using StructureMap;
+﻿using StructureMap;
+using StructureMap.Graph;
 
 namespace MunkeyIssues.Web.StructureMap
 {
@@ -7,13 +7,11 @@ namespace MunkeyIssues.Web.StructureMap
     {
         public static IContainer Build()
         {
-            return new Container(x =>
+            return new Container(x => x.Scan(scanner =>
             {
-                x.AddRegistry(new AutoMapperRegistry());
-                x.AddRegistry(new MassTransitRegistry());
-                x.AddRegistry(new ServicesRegistry());
-                x.AddRegistry(new WebApiControllerRegistry());
-            });
+                scanner.TheCallingAssembly();
+                scanner.LookForRegistries();
+            }));
         }
     }
 }

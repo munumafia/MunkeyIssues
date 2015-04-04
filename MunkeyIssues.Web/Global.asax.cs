@@ -12,7 +12,7 @@ namespace MunkeyIssues.Web
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        private static IContainer _Container;
+        public static IContainer Container { get; set; }
 
         protected void Application_Start()
         {
@@ -23,21 +23,12 @@ namespace MunkeyIssues.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             AutoMapperConfiguration.Configure();
-            SetupContainer();
         }
 
         protected void Application_End()
         {
-            var serviceBus = _Container.GetInstance<IServiceBus>();
+            var serviceBus = Container.GetInstance<IServiceBus>();
             serviceBus.Dispose();
-        }
-
-        private void SetupContainer()
-        {
-            _Container = ContainerBuilder.Build();
-            GlobalConfiguration.Configuration.Services.Replace(
-                typeof(IHttpControllerActivator), 
-                new StructureMapHttpControllerActivator(_Container));
         }
     }
 }

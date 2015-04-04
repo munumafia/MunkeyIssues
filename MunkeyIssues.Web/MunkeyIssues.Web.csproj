@@ -209,6 +209,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\Startup.StructureMap.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="StructureMap\ContainerBuilder.cs" />
     <Compile Include="StructureMap\Registries\AutoMapperRegistry.cs" />
     <Compile Include="StructureMap\Registries\MassTransitRegistry.cs" />
+    <Compile Include="StructureMap\Registries\OAuthRegistry.cs" />
     <Compile Include="StructureMap\Registries\ServicesRegistry.cs" />
     <Compile Include="StructureMap\Registries\WebApiControllerRegistry.cs" />
     <Compile Include="StructureMap\StructureMapHttpControllerActivator.cs" />
