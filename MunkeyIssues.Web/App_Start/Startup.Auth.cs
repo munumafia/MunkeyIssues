@@ -22,7 +22,7 @@ namespace MunkeyIssues.Web
                 AllowInsecureHttp = true,
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 TokenEndpointPath = new PathString("/api/token"),
-                Provider = new UserServiceAuthorizationServerProvider()
+                Provider = Container.GetInstance<OAuthAuthorizationServerProvider>()
             });
 
             // Enable the application to use a cookie to store information for the signed in user

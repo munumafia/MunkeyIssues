@@ -1,4 +1,5 @@
 ﻿using StructureMap;
+using StructureMap.Graph;
 
 namespace MunkeyIssues.UserService.StructureMap
 {
@@ -6,7 +7,11 @@ namespace MunkeyIssues.UserService.StructureMap
     {
         public static IContainer Build()
         {
-            return new Container(x => x.Scan(scanner => scanner.LookForRegistries()));
+            return new Container(x => x.Scan(scanner =>
+            {
+                scanner.TheCallingAssembly();
+                scanner.LookForRegistries();
+            }));
         }
     }
 }

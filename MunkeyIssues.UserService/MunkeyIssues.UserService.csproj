@@ -102,6 +102,7 @@
     <Compile Include="AutoMapper\AutoMapperBuilder.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Mappers\IMapper.cs" />
+    <Compile Include="Mappers\User\AuthenticateRequestToUserMapper.cs" />
     <Compile Include="Mappers\User\RegisterUserRequestToUserMapper.cs" />
     <Compile Include="MassTransit\Consumers\UserConsumers.cs" />
     <Compile Include="MassTransit\MassTransitBuilder.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Service\Validation\IValidateUpdate.cs" />
     <Compile Include="StructureMap\ContainerBuilder.cs" />
     <Compile Include="StructureMap\Registries\AutoMapperRegistry.cs" />
+    <Compile Include="StructureMap\Registries\MapperRegistry.cs" />
     <Compile Include="StructureMap\Registries\MassTransitRegistry.cs" />
     <Compile Include="StructureMap\Registries\PersistenceRegistry.cs" />
     <Compile Include="StructureMap\Registries\ServicesRegistry.cs" />

@@ -20,6 +20,21 @@ namespace MunkeyIssues.UserService.Service.User
             _AddValidator = addValidator;
         }
 
+        public bool Authenticate(Domain.User user)
+        {
+            var existing = _DbContext.Users.Where(u => u.EmailAddress == user.EmailAddress)
+                .Select(u => new {u.Password, u.Salt})
+                .FirstOrDefault();
+
+            if (existing != null)
+            {
+                user.Password = _HashService.HashString(user.Password, existing.Salt);
+                return user.Password == existing.Password;
+            }
+
+            return false;
+        }
+
         public CommandResult<Domain.User> Register(Domain.User user)
         {
             var errors = _AddValidator.ValidateAdd(user);
