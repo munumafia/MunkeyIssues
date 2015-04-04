@@ -1,6 +1,8 @@
-﻿namespace MunkeyIssues.UserService.Domain
+﻿using MunkeyIssues.Core.Domain;
+
+namespace MunkeyIssues.UserService.Domain
 {
-    public class User
+    public class User : IEntity
     {
         /// <summary>
         /// The ID of the user
