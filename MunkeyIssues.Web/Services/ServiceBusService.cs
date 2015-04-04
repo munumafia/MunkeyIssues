@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MassTransit;
 
-namespace MunkeyIssues.Web.Services
+namespace MunkeyIssues.Api.Services
 {
     public class ServiceBusService : IServiceBusService
     {

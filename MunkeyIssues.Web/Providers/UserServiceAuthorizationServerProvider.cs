@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.Owin.Security.OAuth;
+using MunkeyIssues.Api.Services.Users;
 using MunkeyIssues.Core.Messaging.Users.Auth;
-using MunkeyIssues.Web.Services.Users;
 
-namespace MunkeyIssues.Web.Providers
+namespace MunkeyIssues.Api.Providers
 {
     public class UserServiceAuthorizationServerProvider : OAuthAuthorizationServerProvider 
     {

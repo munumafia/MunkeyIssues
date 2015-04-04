@@ -2,7 +2,7 @@
 using System.Net.Http;
 using MunkeyIssues.Core.Messaging;
 
-namespace MunkeyIssues.Web.ResponseMappers
+namespace MunkeyIssues.Api.ResponseMappers
 {
     public class ResponseMapper : IResponseMapper
     {

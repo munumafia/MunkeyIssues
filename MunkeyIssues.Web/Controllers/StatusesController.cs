@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using MunkeyIssues.Api.Models;
+using MunkeyIssues.Api.ResponseMappers;
+using MunkeyIssues.Api.Services.Statuses;
 using MunkeyIssues.Core.Messaging.Issues.Status;
-using MunkeyIssues.Web.Models;
-using MunkeyIssues.Web.ResponseMappers;
-using MunkeyIssues.Web.Services.Statuses;
 
-namespace MunkeyIssues.Web.Controllers
+namespace MunkeyIssues.Api.Controllers
 {
     public class StatusesController : ApiController
     {

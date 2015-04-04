@@ -1,7 +1,7 @@
 ﻿using StructureMap;
 using StructureMap.Graph;
 
-namespace MunkeyIssues.Web.StructureMap
+namespace MunkeyIssues.Api.StructureMap
 {
     public class ContainerBuilder
     {

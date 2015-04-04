@@ -1,9 +1,10 @@
 ﻿using Microsoft.Owin;
+using MunkeyIssues.Api;
 using Owin;
 using StructureMap;
 
-[assembly: OwinStartupAttribute(typeof(MunkeyIssues.Web.Startup))]
-namespace MunkeyIssues.Web
+[assembly: OwinStartup(typeof(Startup))]
+namespace MunkeyIssues.Api
 {
     public partial class Startup
     {

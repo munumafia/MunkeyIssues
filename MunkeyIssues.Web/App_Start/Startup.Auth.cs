@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
-using MunkeyIssues.Web.Providers;
+using MunkeyIssues.Api.Models;
 using Owin;
-using MunkeyIssues.Web.Models;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public partial class Startup
     {

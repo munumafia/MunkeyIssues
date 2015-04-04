@@ -2,7 +2,7 @@
 using StructureMap.Configuration.DSL;
 using StructureMap.Graph;
 
-namespace MunkeyIssues.Web.StructureMap.Registries
+namespace MunkeyIssues.Api.StructureMap.Registries
 {
     public class WebApiControllerRegistry : Registry
     {

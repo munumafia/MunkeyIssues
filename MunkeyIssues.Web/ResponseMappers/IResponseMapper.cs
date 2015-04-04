@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Web;
+﻿using System.Net.Http;
 using MunkeyIssues.Core.Messaging;
 
-namespace MunkeyIssues.Web.ResponseMappers
+namespace MunkeyIssues.Api.ResponseMappers
 {
     public interface IResponseMapper
     {

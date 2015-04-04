@@ -1,4 +1,4 @@
-﻿namespace MunkeyIssues.Web.Models
+﻿namespace MunkeyIssues.Api.Models
 {
     public class StatusViewModel
     {

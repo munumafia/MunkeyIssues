@@ -1,14 +1,12 @@
 ﻿using System.Web.Http;
-using System.Web.Http.Dispatcher;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using MassTransit;
-using MunkeyIssues.Web.AutoMapper;
-using MunkeyIssues.Web.StructureMap;
+using MunkeyIssues.Api.AutoMapper;
 using StructureMap;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public class MvcApplication : System.Web.HttpApplication
     {

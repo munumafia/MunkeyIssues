@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Web.Configuration;
 using Magnum.Extensions;
-using MunkeyIssues.Web.ResponseMappers;
-using MunkeyIssues.Web.Services;
-using MunkeyIssues.Web.Services.Categories;
-using MunkeyIssues.Web.Services.Statuses;
+using MunkeyIssues.Api.ResponseMappers;
+using MunkeyIssues.Api.Services;
+using MunkeyIssues.Api.Services.Categories;
+using MunkeyIssues.Api.Services.Statuses;
 using StructureMap.Configuration.DSL;
 
-namespace MunkeyIssues.Web.StructureMap.Registries
+namespace MunkeyIssues.Api.StructureMap.Registries
 {
     public class ServicesRegistry : Registry
     {

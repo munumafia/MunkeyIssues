@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Core", "Munkey
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.IssueService", "MunkeyIssues.IssueService\MunkeyIssues.IssueService.csproj", "{7A7B55D5-2EF5-4B74-842B-691BFC235AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Web", "MunkeyIssues.Web\MunkeyIssues.Web.csproj", "{53104B38-7808-4D51-9EE3-40B2272391C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.Api", "MunkeyIssues.Web\MunkeyIssues.Api.csproj", "{53104B38-7808-4D51-9EE3-40B2272391C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunkeyIssues.UserService", "MunkeyIssues.UserService\MunkeyIssues.UserService.csproj", "{F71F1D87-F3E9-4546-9FFC-89902FFF1B39}"
 EndProject

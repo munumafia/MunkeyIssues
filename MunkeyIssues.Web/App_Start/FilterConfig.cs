@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public class FilterConfig
     {

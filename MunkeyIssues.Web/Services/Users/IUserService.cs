@@ -2,7 +2,7 @@
 using MunkeyIssues.Core.Messaging.Users.Auth;
 using MunkeyIssues.Core.Messaging.Users.Register;
 
-namespace MunkeyIssues.Web.Services.Users
+namespace MunkeyIssues.Api.Services.Users
 {
     public interface IUserService
     {

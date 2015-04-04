@@ -1,6 +1,6 @@
 ﻿using MassTransit;
 
-namespace MunkeyIssues.Web.MassTransit
+namespace MunkeyIssues.Api.MassTransit
 {
     public static class ServiceBusBuilder
     {

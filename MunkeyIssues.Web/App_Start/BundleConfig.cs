@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public class BundleConfig
     {

@@ -1,8 +1,8 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Dispatcher;
-using MunkeyIssues.Web.StructureMap;
+using MunkeyIssues.Api.StructureMap;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public partial class Startup
     {

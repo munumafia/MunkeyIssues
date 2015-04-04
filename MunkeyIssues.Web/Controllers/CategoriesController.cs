@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using MunkeyIssues.Api.Models;
+using MunkeyIssues.Api.ResponseMappers;
+using MunkeyIssues.Api.Services.Categories;
 using MunkeyIssues.Core.Messaging.Issues.Category;
-using MunkeyIssues.Web.Models;
-using MunkeyIssues.Web.ResponseMappers;
-using MunkeyIssues.Web.Services.Categories;
 
-namespace MunkeyIssues.Web.Controllers
+namespace MunkeyIssues.Api.Controllers
 {
     public class CategoriesController : ApiController
     {

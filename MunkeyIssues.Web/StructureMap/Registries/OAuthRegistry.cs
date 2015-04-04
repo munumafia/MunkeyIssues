@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin.Security.OAuth;
-using MunkeyIssues.Web.Providers;
+using MunkeyIssues.Api.Providers;
 using StructureMap.Configuration.DSL;
 
-namespace MunkeyIssues.Web.StructureMap.Registries
+namespace MunkeyIssues.Api.StructureMap.Registries
 {
     public class OAuthRegistry : Registry
     {

@@ -3,7 +3,7 @@ using MunkeyIssues.Core.Messaging.Users.Auth;
 using MunkeyIssues.Core.Messaging.Users.Register;
 using MunkeyIssues.Core.Services.Cryptography;
 
-namespace MunkeyIssues.Web.Services.Users
+namespace MunkeyIssues.Api.Services.Users
 {
     public class UserService : IUserService
     {

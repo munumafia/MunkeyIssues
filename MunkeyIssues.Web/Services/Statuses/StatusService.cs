@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using MunkeyIssues.Core.Messaging.Issues.Status;
 
-namespace MunkeyIssues.Web.Services.Statuses
+namespace MunkeyIssues.Api.Services.Statuses
 {
     public class StatusService : IStatusService
     {

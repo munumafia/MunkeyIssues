@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using MunkeyIssues.Api.Models;
 using MunkeyIssues.Core.Messaging.Issues.Category;
 using MunkeyIssues.Core.Messaging.Issues.Status;
-using MunkeyIssues.Web.Models;
 
-namespace MunkeyIssues.Web.AutoMapper
+namespace MunkeyIssues.Api.AutoMapper
 {
     public class AutoMapperConfiguration
     {

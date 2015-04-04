@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using StructureMap.Configuration.DSL;
 
-namespace MunkeyIssues.Web.StructureMap.Registries
+namespace MunkeyIssues.Api.StructureMap.Registries
 {
     public class MassTransitRegistry : Registry
     {

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using StructureMap.Configuration.DSL;
 
-namespace MunkeyIssues.Web.StructureMap.Registries
+namespace MunkeyIssues.Api.StructureMap.Registries
 {
     public class AutoMapperRegistry : Registry
     {

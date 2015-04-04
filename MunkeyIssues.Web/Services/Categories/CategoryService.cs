@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using MunkeyIssues.Core.Messaging.Issues.Category;
 
-namespace MunkeyIssues.Web.Services.Categories
+namespace MunkeyIssues.Api.Services.Categories
 {
     public class CategoryService : ICategoryService
     {

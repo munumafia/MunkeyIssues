@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace MunkeyIssues.Web.Services
+namespace MunkeyIssues.Api.Services
 {
     public interface IServiceBusService
     {

@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
 
-namespace MunkeyIssues.Web
+namespace MunkeyIssues.Api
 {
     public static class WebApiConfig
     {
