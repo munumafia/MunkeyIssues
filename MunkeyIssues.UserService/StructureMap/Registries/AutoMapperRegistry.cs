@@ -3,7 +3,7 @@ using StructureMap.Configuration.DSL;
 
 namespace MunkeyIssues.UserService.StructureMap.Registries
 {
-    internal class AutoMapperRegistry : Registry
+    public class AutoMapperRegistry : Registry
     {
         public AutoMapperRegistry()
         {

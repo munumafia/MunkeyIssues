@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Configuration;
 using System.Web.Configuration;
 using Magnum.Extensions;
 using MunkeyIssues.Api.ResponseMappers;
 using MunkeyIssues.Api.Services;
 using MunkeyIssues.Api.Services.Categories;
 using MunkeyIssues.Api.Services.Statuses;
+using MunkeyIssues.Api.Services.Users;
+using MunkeyIssues.Core.Services.Cryptography;
 using StructureMap.Configuration.DSL;
 
 namespace MunkeyIssues.Api.StructureMap.Registries
@@ -18,6 +21,11 @@ namespace MunkeyIssues.Api.StructureMap.Registries
             For<IServiceBusService>().Use<ServiceBusService>().Ctor<TimeSpan>().Is(serviceTimeout);
             For<ICategoryService>().Use<CategoryService>();
             For<IStatusService>().Use<StatusService>();
+            For<IEncryptionService>().Use<RSAEncryptionService>();
+
+            var cryptoKey = ConfigurationManager.AppSettings["UserServiceCryptoKey"];
+            For<IUserService>().Use<UserService>()
+                .Ctor<string>("publicKey").Is(cryptoKey);
             
             For<IResponseMapper>().Use<ResponseMapper>();
         }

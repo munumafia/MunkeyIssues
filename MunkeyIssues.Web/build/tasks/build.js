@@ -7,6 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
 var compilerOptions = require('../babel-options');
 var assign = Object.assign || require('object.assign');
+var argv = require('yargs').argv;
+var rename = require('gulp-rename');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -29,6 +31,17 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+gulp.task('build-config', function () {
+  var config = argv.env
+    ? paths.config + 'config.' + arg.env + '.js'
+    : paths.config + 'config.development.js';
+
+  return gulp.src(config)
+    .pipe(rename('config.js'))
+    .pipe(to5(assign({}, compilerOptions, {modules:'system'})))
+    .pipe(gulp.dest(paths.output));
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -36,7 +49,7 @@ gulp.task('build-html', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html'],
+    ['build-system', 'build-html', 'build-config'],
     callback
   );
 });

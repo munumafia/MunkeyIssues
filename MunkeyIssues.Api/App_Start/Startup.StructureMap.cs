@@ -9,10 +9,11 @@ namespace MunkeyIssues.Api
         public void ConfigureContainer()
         {
             Container = ContainerBuilder.Build();
-            GlobalConfiguration.Configuration.Services.Replace(
-                typeof (IHttpControllerActivator),
-                new StructureMapHttpControllerActivator(Container));
+            //GlobalConfiguration.Configuration.Services.Replace(
+            //    typeof (IHttpControllerActivator),
+            //    new StructureMapHttpControllerActivator(Container));
 
+            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(Container);
             MvcApplication.Container = Container;
         }
     }

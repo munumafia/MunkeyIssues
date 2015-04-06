@@ -1,5 +1,8 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
+using Drum;
+using MunkeyIssues.Api.ResponseEnrichers;
+using MunkeyIssues.Api.StructureMap;
 
 namespace MunkeyIssues.Api
 {
@@ -11,10 +14,11 @@ namespace MunkeyIssues.Api
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 
-            // Web API configuration and services
+            // Web API filters and handlers
+            config.MessageHandlers.Add(new EnrichingHandler());
 
             // Web API routes
-            config.MapHttpAttributeRoutes();
+            config.MapHttpAttributeRoutesAndUseUriMaker();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
