@@ -91,6 +91,8 @@
     <Content Include="src\child-router.js" />
     <Content Include="src\flickr.html" />
     <Content Include="src\flickr.js" />
+    <Content Include="src\login.html" />
+    <Content Include="src\login.js" />
     <Content Include="src\nav-bar.html" />
     <Content Include="src\nav-bar.js" />
     <Content Include="src\welcome.html" />

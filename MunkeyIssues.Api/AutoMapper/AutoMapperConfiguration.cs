@@ -2,6 +2,7 @@
 using MunkeyIssues.Api.Models;
 using MunkeyIssues.Core.Messaging.Issues.Category;
 using MunkeyIssues.Core.Messaging.Issues.Status;
+using MunkeyIssues.Core.Messaging.Users.Register;
 
 namespace MunkeyIssues.Api.AutoMapper
 {
@@ -14,6 +15,8 @@ namespace MunkeyIssues.Api.AutoMapper
 
             Mapper.CreateMap<Status, StatusViewModel>();
             Mapper.CreateMap<StatusViewModel, Status>();
+
+            Mapper.CreateMap<RegisterViewModel, RegisterUserRequest>();
         }
     }
 }

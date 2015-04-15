@@ -25,8 +25,11 @@ namespace MunkeyIssues.Api
 
         protected void Application_End()
         {
-            var serviceBus = Container.GetInstance<IServiceBus>();
-            serviceBus.Dispose();
+            if (Container != null)
+            {
+                var serviceBus = Container.GetInstance<IServiceBus>();
+                serviceBus.Dispose();
+            }
         }
     }
 }

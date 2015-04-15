@@ -7,7 +7,7 @@ namespace MunkeyIssues.Api.StructureMap.Registries
     {
         public MassTransitRegistry()
         {
-            ForSingletonOf<IServiceBus>().Use(MassTransit.ServiceBusBuilder.Build());
+            ForSingletonOf<IServiceBus>().Use(MassTransit.ServiceBusBuilder.Build()).Singleton();
         }
     }
 }

@@ -45,6 +45,9 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="Drum">
+      <HintPath>..\packages\Drum.0.3.1\lib\net45\Drum.dll</HintPath>
+    </Reference>
     <Reference Include="Magnum">
       <HintPath>..\packages\Magnum.2.1.3\lib\NET40\Magnum.dll</HintPath>
     </Reference>
@@ -214,20 +217,32 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StatusesController.cs" />
+    <Compile Include="Extensions\LinkDictionaryExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
     <Compile Include="MassTransit\ServiceBusBuilder.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CategoryViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Resources\BaseResource.cs" />
+    <Compile Include="Models\Resources\HypermediaLink.cs" />
+    <Compile Include="Models\Resources\PagedResource.cs" />
+    <Compile Include="Models\Resources\SingleResource.cs" />
+    <Compile Include="Models\Resources\ValidatedResource.cs" />
     <Compile Include="Models\StatusViewModels.cs" />
+    <Compile Include="Models\Users\RegisterUserViewModel.cs" />
+    <Compile Include="Models\Users\UpdateUserViewModel.cs" />
+    <Compile Include="Models\Users\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\UserServiceAuthorizationServerProvider.cs" />
+    <Compile Include="ResponseEnrichers\BaseResponseEnricher.cs" />
+    <Compile Include="ResponseEnrichers\EnrichingHandler.cs" />
+    <Compile Include="ResponseEnrichers\IResponseEnricher.cs" />
+    <Compile Include="ResponseEnrichers\User\CategoryResponseEnricher.cs" />
     <Compile Include="ResponseMappers\IResponseMapper.cs" />
     <Compile Include="ResponseMappers\ResponseMapper.cs" />
     <Compile Include="Services\Categories\CategoryService.cs" />
@@ -240,11 +255,14 @@
     <Compile Include="Services\Users\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StructureMap\ContainerBuilder.cs" />
+    <Compile Include="StructureMap\Conventions\WebApiControllerConvention.cs" />
     <Compile Include="StructureMap\Registries\AutoMapperRegistry.cs" />
     <Compile Include="StructureMap\Registries\MassTransitRegistry.cs" />
     <Compile Include="StructureMap\Registries\OAuthRegistry.cs" />
+    <Compile Include="StructureMap\Registries\ResponseEnricherRegistry.cs" />
     <Compile Include="StructureMap\Registries\ServicesRegistry.cs" />
     <Compile Include="StructureMap\Registries\WebApiControllerRegistry.cs" />
+    <Compile Include="StructureMap\StructureMapDependencyResolver.cs" />
     <Compile Include="StructureMap\StructureMapHttpControllerActivator.cs" />
   </ItemGroup>
   <ItemGroup>

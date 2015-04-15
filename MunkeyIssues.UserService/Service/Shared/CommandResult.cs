@@ -17,6 +17,14 @@ namespace MunkeyIssues.UserService.Service.Shared
         /// <summary>
         /// Any validation errors that were encountered
         /// </summary>
-        public IList<string> ValidationErrors { get; set; } 
+        public IList<string> ValidationErrors { get; set; }
+
+        /// <summary>
+        /// Constructs a new CommandResult
+        /// </summary>
+        public CommandResult()
+        {
+            ValidationErrors = new List<string>();
+        }
     }
 }

@@ -9,6 +9,7 @@ using MunkeyIssues.Core.Messaging.Issues.Status;
 
 namespace MunkeyIssues.Api.Controllers
 {
+    [RoutePrefix("api/statuses")]
     public class StatusesController : ApiController
     {
         private readonly IMappingEngine _Mapper;
@@ -22,6 +23,7 @@ namespace MunkeyIssues.Api.Controllers
             _StatusService = statusService;
         }
 
+        [Route("{id:int}")]
         public Task<HttpResponseMessage> Get(int id)
         {
             var request = new GetStatusRequest { StatusId = id };
@@ -33,6 +35,7 @@ namespace MunkeyIssues.Api.Controllers
             });
         }
 
+        [Route("")]
         public Task<HttpResponseMessage> Post(StatusViewModel model)
         {
             var request = new CreateStatusRequest { Status = _Mapper.Map<Status>(model) };

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Linq;
+using AutoMapper;
 using MassTransit;
 using MunkeyIssues.Core.Messaging.Users.Auth;
 using MunkeyIssues.Core.Messaging.Users.Register;
@@ -31,6 +32,8 @@ namespace MunkeyIssues.UserService.MassTransit.Consumers
             var result = _UserService.Register(user);
 
             var response = _Mapper.Map<RegisterUserResponse>(result);
+            response.Registered = !result.ValidationErrors.Any();
+            response.UserId = result.Entity.Id;
             response.CorrelationId = context.Message.CorrelationId;
 
             context.Respond(response);

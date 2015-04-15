@@ -19,10 +19,10 @@ namespace MunkeyIssues.UserService.StructureMap.Registries
             var cryptoKey = ConfigurationManager.AppSettings["CryptoKey"];
             
             For<IMapper<RegisterUserRequest, Domain.User>>().Use<RegisterUserRequestToUserMapper>()
-                .Ctor<string>(cryptoKey);
+                .Ctor<string>("privateKey").Is(cryptoKey);
 
             For<IMapper<AuthenticateRequest, Domain.User>>().Use<AuthenticateRequestToUserMapper>()
-                .Ctor<string>(cryptoKey);
+                .Ctor<string>("privateKey").Is(cryptoKey);
         }
     }
 }

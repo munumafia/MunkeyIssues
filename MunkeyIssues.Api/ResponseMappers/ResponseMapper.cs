@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Http;
+using MunkeyIssues.Api.Models.Resources;
 using MunkeyIssues.Core.Messaging;
 
 namespace MunkeyIssues.Api.ResponseMappers
@@ -29,7 +30,8 @@ namespace MunkeyIssues.Api.ResponseMappers
             switch (result)
             {
                 case MessageResult.Success:
-                    response = request.CreateResponse(HttpStatusCode.OK, viewModel);
+                    var resource = new SingleResource<TViewModel> {Item = viewModel};
+                    response = request.CreateResponse(HttpStatusCode.OK, resource);
                     break;
                 case MessageResult.NotFound:
                     response = new HttpResponseMessage(HttpStatusCode.NotFound);

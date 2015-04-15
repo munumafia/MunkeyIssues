@@ -9,6 +9,7 @@ using MunkeyIssues.Core.Messaging.Issues.Category;
 
 namespace MunkeyIssues.Api.Controllers
 {
+    [RoutePrefix("api/categories")]
     public class CategoriesController : ApiController
     {
         private readonly ICategoryService _CategoryService;
@@ -22,6 +23,7 @@ namespace MunkeyIssues.Api.Controllers
             _ResponseMapper = responseMapper;
         }
 
+        [Route("{id:int}")]
         public Task<HttpResponseMessage> Get(int id)
         {
             var request = new GetCategoryRequest {CategoryId = id};
@@ -33,6 +35,7 @@ namespace MunkeyIssues.Api.Controllers
             });
         }
 
+        [Route("")]
         public Task<HttpResponseMessage> Post(CategoryViewModel model)
         {
             var request = new CreateCategoryRequest { Category = _Mapper.Map<Category>(model) };

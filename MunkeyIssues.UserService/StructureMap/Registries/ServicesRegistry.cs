@@ -13,11 +13,12 @@ namespace MunkeyIssues.UserService.StructureMap.Registries
         public ServicesRegistry()
         {
             var key = ConfigurationManager.AppSettings["CryptoKey"];
-            For<IEncryptionService>().Use<RSAEncryptionService>().Ctor<string>(key);
+            For<IEncryptionService>().Use<RSAEncryptionService>();
 
             For<IValidateAdd<User>>().Use<UserAddValidator>();
             For<IUserService>().Use<Service.User.UserService>();
-            For<IHashService>().Use<SHA512HashService>();
+            For<IHashService>().Use<SHA512HashService>()
+                .Ctor<int>("saltLength").Is(16);
         }
     }
 }

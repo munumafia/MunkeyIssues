@@ -1,4 +1,4 @@
-﻿using System.Web.Http.Controllers;
+﻿using MunkeyIssues.Api.StructureMap.Conventions;
 using StructureMap.Configuration.DSL;
 using StructureMap.Graph;
 
@@ -11,8 +11,7 @@ namespace MunkeyIssues.Api.StructureMap.Registries
             Scan(x =>
             {
                 x.TheCallingAssembly();
-                x.AddAllTypesOf<IHttpController>();
-                x.WithDefaultConventions();
+                x.Convention<WebApiControllerConvention>();    
             });
         }
     }
