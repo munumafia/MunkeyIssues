@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentMigrator;
 using MunkeyIssues.Migrations.Enums;
 using MunkeyIssues.Migrations.Extensions;
@@ -38,7 +35,7 @@ namespace MunkeyIssues.Migrations._2015._04
 
         public override void Down()
         {
-            throw new NotImplementedException();
+            // Nothing to roll back
         }
     }
 }
